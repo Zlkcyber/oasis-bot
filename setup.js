@@ -17,11 +17,11 @@ function askQuestion(query) {
 async function setup() {
   showBanner();
   // Ask for number of providers to create
-  const input = await askQuestion('Enter the number of Providers you want to create [1-100]: ');
+  const input = await askQuestion('Enter the number of Providers you want to create [1-1000]: ');
   const numProv = parseInt(input, 10);
   
-  if (isNaN(numProv) || numProv < 1 || numProv > 100) {
-    logger("Invalid input. Please enter a number between 1 and 100.", "", "error");
+  if (isNaN(numProv) || numProv < 1 || numProv > 1000) {
+    logger("Invalid input. Please enter a number between 1 and 1000.", "", "error");
     rl.close();
     return;
   };
